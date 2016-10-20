@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on i_kim.log();</title>
+    <link>http://great.github.io/categories/tools/</link>
+    <description>Recent content in Tools on i_kim.log();</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 10 Feb 2016 10:47:16 +0900</lastBuildDate>
+    <atom:link href="http://great.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>*.github.io using hugo</title>
+      <link>http://great.github.io/post/1/</link>
+      <pubDate>Wed, 10 Feb 2016 10:47:16 +0900</pubDate>
+      
+      <guid>http://great.github.io/post/1/</guid>
+      <description>&lt;p&gt;github.io를 시작해 보려고 어떻게 하는 것인지 찾아 보니 보통 &lt;code&gt;Jekyll&lt;/code&gt;이라는 것을 가지고 만드는 것 같다.
+그런 줄만 알고 그러려니 했는데 &lt;code&gt;Jekyll&lt;/code&gt; 자체를 구동하기 위해 &lt;code&gt;ruby&lt;/code&gt;기반으로 이것저것 설치를 해야 해서 고통스럽다.
+갑자기 다른 곳에서 &lt;del&gt;과연 그럴 일이&amp;hellip;&lt;/del&gt; 뭔가 쓰고 싶거나 할 때 ruby부터 설치하고 어쩌고 해야 하는 과정이 매우 번거로워 보인다.&lt;/p&gt;
+
+&lt;p&gt;그러던 중 &lt;code&gt;go&lt;/code&gt;를 가지고 만든 &lt;a href=&#34;http://gohugo.io&#34;&gt;hugo&lt;/a&gt;라는 것을 알게 되었고 go 특성(?)상 번거로운 실행 환경 구성 문제가 없어 &lt;del&gt;날로 먹을 수 있다&lt;/del&gt; 마음에 든다.&lt;/p&gt;
+
+&lt;p&gt;대부분 환경에서 구동 가능한 hugo 바이너리를 간단히 받을 수 있으니
+&amp;ldquo;특별한 경우&amp;rdquo;에 글 하나 올리겠다고 ruby 환경 구성하고 Jekyll 설치까지 해야 하는 그런 일은 안 해도 된다.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
