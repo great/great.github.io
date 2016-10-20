@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>i_kim.log();</title>
-    <link>http://great.github.io/</link>
+    <link>https://great.github.io/</link>
     <description>Recent content on i_kim.log();</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
     <lastBuildDate>Thu, 20 Oct 2016 15:48:48 +0900</lastBuildDate>
-    <atom:link href="http://great.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://great.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dummy page for testing</title>
-      <link>http://great.github.io/post/dummy/</link>
+      <link>https://great.github.io/post/dummy/</link>
       <pubDate>Thu, 20 Oct 2016 15:48:48 +0900</pubDate>
       
-      <guid>http://great.github.io/post/dummy/</guid>
+      <guid>https://great.github.io/post/dummy/</guid>
       <description>&lt;p&gt;Hello, dummy world.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>*.github.io using hugo</title>
-      <link>http://great.github.io/post/1/</link>
+      <link>https://great.github.io/post/1/</link>
       <pubDate>Wed, 10 Feb 2016 10:47:16 +0900</pubDate>
       
-      <guid>http://great.github.io/post/1/</guid>
+      <guid>https://great.github.io/post/1/</guid>
       <description>&lt;p&gt;github.io를 시작해 보려고 어떻게 하는 것인지 찾아 보니 보통 &lt;code&gt;Jekyll&lt;/code&gt;이라는 것을 가지고 만드는 것 같다.
 그런 줄만 알고 그러려니 했는데 &lt;code&gt;Jekyll&lt;/code&gt; 자체를 구동하기 위해 &lt;code&gt;ruby&lt;/code&gt;기반으로 이것저것 설치를 해야 해서 고통스럽다.
 갑자기 다른 곳에서 &lt;del&gt;과연 그럴 일이&amp;hellip;&lt;/del&gt; 뭔가 쓰고 싶거나 할 때 ruby부터 설치하고 어쩌고 해야 하는 과정이 매우 번거로워 보인다.&lt;/p&gt;
