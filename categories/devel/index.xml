@@ -6,8 +6,38 @@
     <description>Recent content in Devel on i_kim.log();</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 10 Feb 2016 10:47:16 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 May 2016 10:24:16 +0900</lastBuildDate>
     <atom:link href="https://great.github.io/categories/devel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>RxJava의 concatMapEager() 연산자: 동시성 &#43; 순서 보장</title>
+      <link>https://great.github.io/post/10/</link>
+      <pubDate>Sun, 15 May 2016 10:24:16 +0900</pubDate>
+      
+      <guid>https://great.github.io/post/10/</guid>
+      <description>&lt;p&gt;RxJava를 사용하다 보면 &lt;code&gt;flatMap&lt;/code&gt;을 무척 많이 사용하게 된다.
+문제는 &lt;code&gt;flatMap&lt;/code&gt;의 특성(&lt;code&gt;merge&lt;/code&gt;)상 목록 순서가 꼬이는 경우가 있다. 특히 비동기 항목과 함께 사용하면 제대로 틀어진다.
+이에 대한 해결책으로 &lt;code&gt;concatMap&lt;/code&gt;을 이야기하는 경우를 보았지만 내부적으로 &lt;code&gt;concat&lt;/code&gt;을 사용하기 때문애 동시성 처리를 했을 때에는 앞선 항목을 처리할 때 까지 기다려야 하는 문제가 있었다.&lt;/p&gt;
+
+&lt;p&gt;RxJava 1.0.15 버전부터 (실험적인) &lt;code&gt;concatMapEager()&lt;/code&gt;라는 operator를 사용할 수 있게 되었다.
+이 버전이 처음 나왔을 때가 2015년 8월이므로 그 이전 RxJava에는 물론 이 기능이 없어 다른 방식으로 정렬 문제를 해결했었다.
+정렬시 필요한 시간은 네트워크 호출 시간에 비하면 극히 짧으므로 속도 면에서는 분명 이득을 보았지만
+정렬 처리를 위해 이런저런 구현을 조금 더 해야 해서 코드가 지저분해진다.&lt;/p&gt;
+
+&lt;p&gt;겉보기에는 그냥 단순하게 &lt;code&gt;faltMap&lt;/code&gt;이나 &lt;code&gt;concatMap&lt;/code&gt;을 쓸 자리에 &lt;code&gt;concatMapEager&lt;/code&gt;를 대신 넣었을 뿐이다.
+단지 연산자를 바꾸는 것만으로 병렬 처리를 하면서도 호출 순서까지 보장할 수 있다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Observable.from(list)
+    .concatMapEager(deferredClient::findById)
+    ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;내부적으로는 링 버퍼를 사용해서 순서 보장 문제를 해결하고 있다.
+실제로 이를 이용해서 &lt;a href=&#34;https://github.com/couchbase/couchbase-java-client/releases/tag/2.2.5&#34;&gt;Couchbase Java Client 2.2.5&lt;/a&gt; 버전에 대한 &lt;a href=&#34;https://github.com/couchbase/couchbase-java-client/commit/cb6097de716752215959377f6a0618d747d664c7&#34;&gt;code contribution&lt;/a&gt;을 했었다.&lt;/p&gt;
+
+&lt;p&gt;성능 테스트는 &lt;a href=&#34;http://www.couchbase.com&#34;&gt;Couchbase&lt;/a&gt; 직원들과 충분히(?) 진행했기에 믿고 써도 된다.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>*.github.io using hugo</title>

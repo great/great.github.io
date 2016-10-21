@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title> RxJava의 concatMapEager() 연산자: 동시성 &#43; 순서 보장 &middot; i_kim.log(); </title>
+
+
+<link rel="stylesheet" href="https://great.github.io//css/slim.css">
+<link rel="stylesheet" href="https://great.github.io//css/highlight.min.css">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<link href="" rel="alternate" type="application/rss+xml" title="i_kim.log();" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+  <h1 class="site-title"><a href="https://great.github.io/">i_kim.log();</a></h1>
+  <p class="site-tagline"></p>
+  <div class="nav">
+    <a class="nav-btn" href="#">
+      <span class="ci ci-burger"></span>
+    </a>
+    <ul class="nav-list">
+       
+	  <li class="spacer">&ac;</li>
+  
+    </ul>
+  </div>
+</div>
+    <div class="content">
+      <div class="posts">
+        <div class="post">
+          <h2 class="post-title"><a href="https://great.github.io/post/10/">RxJava의 concatMapEager() 연산자: 동시성 &#43; 순서 보장</a></h2>
+          <span class="post-date">May 15, 2016 </span>
+          <div class="post-content">
+            <p>RxJava를 사용하다 보면 <code>flatMap</code>을 무척 많이 사용하게 된다.
+문제는 <code>flatMap</code>의 특성(<code>merge</code>)상 목록 순서가 꼬이는 경우가 있다. 특히 비동기 항목과 함께 사용하면 제대로 틀어진다.
+이에 대한 해결책으로 <code>concatMap</code>을 이야기하는 경우를 보았지만 내부적으로 <code>concat</code>을 사용하기 때문애 동시성 처리를 했을 때에는 앞선 항목을 처리할 때 까지 기다려야 하는 문제가 있었다.</p>
+
+<p>RxJava 1.0.15 버전부터 (실험적인) <code>concatMapEager()</code>라는 operator를 사용할 수 있게 되었다.
+이 버전이 처음 나왔을 때가 2015년 8월이므로 그 이전 RxJava에는 물론 이 기능이 없어 다른 방식으로 정렬 문제를 해결했었다.
+정렬시 필요한 시간은 네트워크 호출 시간에 비하면 극히 짧으므로 속도 면에서는 분명 이득을 보았지만
+정렬 처리를 위해 이런저런 구현을 조금 더 해야 해서 코드가 지저분해진다.</p>
+
+<p>겉보기에는 그냥 단순하게 <code>faltMap</code>이나 <code>concatMap</code>을 쓸 자리에 <code>concatMapEager</code>를 대신 넣었을 뿐이다.
+단지 연산자를 바꾸는 것만으로 병렬 처리를 하면서도 호출 순서까지 보장할 수 있다.</p>
+
+<pre><code class="language-java">Observable.from(list)
+    .concatMapEager(deferredClient::findById)
+    ...
+</code></pre>
+
+<p>내부적으로는 링 버퍼를 사용해서 순서 보장 문제를 해결하고 있다.
+실제로 이를 이용해서 <a href="https://github.com/couchbase/couchbase-java-client/releases/tag/2.2.5">Couchbase Java Client 2.2.5</a> 버전에 대한 <a href="https://github.com/couchbase/couchbase-java-client/commit/cb6097de716752215959377f6a0618d747d664c7">code contribution</a>을 했었다.</p>
+
+<p>성능 테스트는 <a href="http://www.couchbase.com">Couchbase</a> 직원들과 충분히(?) 진행했기에 믿고 써도 된다.</p>
+
+          </div>
+        </div>
+        <div class="pagination">
+          <a class="btn previous " href="https://great.github.io/post/dummy/"> Prev</a>  
+          <a class="btn next " href="https://great.github.io/post/1/"> Next</a> 
+        </div>
+      </div>
+    </div>
+    
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = "https://great.github.io/post/10/";
+        
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//intaekim.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
+    <div class="footer">
+  <p>Powered by <a href="#">N/A</a>. and <a href="#">N/A</a>.</p>
+</div>
+
+  </div>
+  <script src="https://great.github.io//js/slim.js"></script>
+  <script src="https://great.github.io//js/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-81615945-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
