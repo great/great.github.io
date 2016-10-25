@@ -20,6 +20,26 @@
 </head>
 
 <body>
+    
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1840237466220001',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+    
   <div class="container">
     <div class="header">
   <h1 class="site-title"><a href="https://great.github.io/">i_kim.log();</a></h1>
@@ -64,6 +84,9 @@
 <p>성능 테스트는 <a href="http://www.couchbase.com">Couchbase</a> 직원들과 충분히(?) 진행했기에 믿고 써도 된다.</p>
 
           </div>
+          
+          <div class="fb-like" data-href="https://great.github.io/post/10/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+          
         </div>
         <div class="pagination">
           <a class="btn previous " href="https://great.github.io/post/dummy/"> Prev</a>  
@@ -71,6 +94,7 @@
         </div>
       </div>
     </div>
+    
     
     <div id="disqus_thread"></div>
     <script>
