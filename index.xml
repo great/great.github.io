@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>i_kim.log();</title>
-    <link>https://great.github.io/</link>
+    <link>https://great.github.io/index.xml</link>
     <description>Recent content on i_kim.log();</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
