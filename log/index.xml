@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logs on Intae Kim&#39;s personal space</title>
+    <link>https://intae.kim/log/</link>
+    <description>Recent content in Logs on Intae Kim&#39;s personal space</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Mon, 22 May 2017 23:13:42 +0900</lastBuildDate>
+    
+	<atom:link href="https://intae.kim/log/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Functor and monad examples in plain Java</title>
+      <link>https://intae.kim/log/2017/05/22/</link>
+      <pubDate>Mon, 22 May 2017 23:13:42 +0900</pubDate>
+      
+      <guid>https://intae.kim/log/2017/05/22/</guid>
+      <description>원문: http://www.nurkiewicz.com/2016/06/functor-and-monad-examples-in-plain-java.html 작성자: Tomasz Nurkiewicz  이 글은 우리가 쓴 책, &amp;lsquo;Reactive Programming with RxJava&amp;rsquo; 의 부록이었다. Reactive programming과 관련이 깊은 주제긴 하지만 모나드를 소개한다는 게 책과 썩 어울리지는 않았다. 그래서 나는 따로 블로그에 올리기로 했다. 프로그래밍을 다루는 블로그에서 *&amp;ldquo;반은 맞고 반은 틀릴 지 모르는 나만의 모나드 설명&amp;rdquo;*이란 것이 새로운 *&amp;ldquo;Hello World&amp;rdquo;*라는 점을 나도 잘 안다. 하지만 이 글은 펑터(functor)와 모나드(monad)를 자바 자료 구조와 라이브러리라는 각도에서 바라보고 있으며, 이는 공유할 정도의 가치는 있을거라 생각했다.</description>
+    </item>
+    
+  </channel>
+</rss>

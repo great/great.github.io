@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://great.github.io/</loc>
+    <loc>https://intae.kim/log/2017/05/22/</loc>
+    <lastmod>2017-05-22T23:13:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/post/dummy/</loc>
     <lastmod>2016-10-20T15:48:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://great.github.io/post/dummy/</loc>
-    <lastmod>2016-10-20T15:48:48+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://great.github.io/post/10/</loc>
+    <loc>https://intae.kim/post/10/</loc>
     <lastmod>2016-05-15T10:24:16+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://great.github.io/post/1/</loc>
+    <loc>https://intae.kim/post/1/</loc>
     <lastmod>2016-02-10T10:47:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/categories/devel/</loc>
+    <lastmod>2016-05-15T10:24:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/</loc>
+    <lastmod>2017-05-22T23:13:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/log/</loc>
+    <lastmod>2017-05-22T23:13:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/post/</loc>
+    <lastmod>2016-10-20T15:48:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/categories/rxjava/</loc>
+    <lastmod>2016-05-15T10:24:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://intae.kim/categories/tools/</loc>
+    <lastmod>2016-02-10T10:47:16+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

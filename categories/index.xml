@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Intae Kim&#39;s personal space</title>
+    <link>https://intae.kim/categories/</link>
+    <description>Recent content in Categories on Intae Kim&#39;s personal space</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    
+	<atom:link href="https://intae.kim/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Devel</title>
+      <link>https://intae.kim/categories/devel/</link>
+      <pubDate>Sun, 15 May 2016 10:24:16 +0900</pubDate>
+      
+      <guid>https://intae.kim/categories/devel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rxjava</title>
+      <link>https://intae.kim/categories/rxjava/</link>
+      <pubDate>Sun, 15 May 2016 10:24:16 +0900</pubDate>
+      
+      <guid>https://intae.kim/categories/rxjava/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://intae.kim/categories/tools/</link>
+      <pubDate>Wed, 10 Feb 2016 10:47:16 +0900</pubDate>
+      
+      <guid>https://intae.kim/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

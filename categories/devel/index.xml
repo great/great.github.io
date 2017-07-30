@@ -1,58 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>i_kim.log();</title>
-    <link>https://great.github.io/categories/devel/index.xml</link>
-    <description>Recent content on i_kim.log();</description>
+    <title>Devel on Intae Kim&#39;s personal space</title>
+    <link>https://intae.kim/categories/devel/</link>
+    <description>Recent content in Devel on Intae Kim&#39;s personal space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language>
-    <atom:link href="https://great.github.io/categories/devel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 May 2016 10:24:16 +0900</lastBuildDate>
+    
+	<atom:link href="https://intae.kim/categories/devel/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>RxJava의 concatMapEager() 연산자: 동시성 &#43; 순서 보장</title>
-      <link>https://great.github.io/post/10/</link>
+      <link>https://intae.kim/post/10/</link>
       <pubDate>Sun, 15 May 2016 10:24:16 +0900</pubDate>
       
-      <guid>https://great.github.io/post/10/</guid>
-      <description>&lt;p&gt;RxJava를 사용하다 보면 &lt;code&gt;flatMap&lt;/code&gt;을 무척 많이 사용하게 된다.
-문제는 &lt;code&gt;flatMap&lt;/code&gt;의 특성(&lt;code&gt;merge&lt;/code&gt;)상 목록 순서가 꼬이는 경우가 있다. 특히 비동기 항목과 함께 사용하면 제대로 틀어진다.
-이에 대한 해결책으로 &lt;code&gt;concatMap&lt;/code&gt;을 이야기하는 경우를 보았지만 내부적으로 &lt;code&gt;concat&lt;/code&gt;을 사용하기 때문애 동시성 처리를 했을 때에는 앞선 항목을 처리할 때 까지 기다려야 하는 문제가 있었다.&lt;/p&gt;
-
-&lt;p&gt;RxJava 1.0.15 버전부터 (실험적인) &lt;code&gt;concatMapEager()&lt;/code&gt;라는 operator를 사용할 수 있게 되었다.
-이 버전이 처음 나왔을 때가 2015년 8월이므로 그 이전 RxJava에는 물론 이 기능이 없어 다른 방식으로 정렬 문제를 해결했었다.
-정렬시 필요한 시간은 네트워크 호출 시간에 비하면 극히 짧으므로 속도 면에서는 분명 이득을 보았지만
-정렬 처리를 위해 이런저런 구현을 조금 더 해야 해서 코드가 지저분해진다.&lt;/p&gt;
-
-&lt;p&gt;겉보기에는 그냥 단순하게 &lt;code&gt;faltMap&lt;/code&gt;이나 &lt;code&gt;concatMap&lt;/code&gt;을 쓸 자리에 &lt;code&gt;concatMapEager&lt;/code&gt;를 대신 넣었을 뿐이다.
-단지 연산자를 바꾸는 것만으로 병렬 처리를 하면서도 호출 순서까지 보장할 수 있다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Observable.from(list)
-    .concatMapEager(deferredClient::findById)
-    ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;내부적으로는 링 버퍼를 사용해서 순서 보장 문제를 해결하고 있다.
-실제로 이를 이용해서 &lt;a href=&#34;https://github.com/couchbase/couchbase-java-client/releases/tag/2.2.5&#34;&gt;Couchbase Java Client 2.2.5&lt;/a&gt; 버전에 대한 &lt;a href=&#34;https://github.com/couchbase/couchbase-java-client/commit/cb6097de716752215959377f6a0618d747d664c7&#34;&gt;code contribution&lt;/a&gt;을 했었다.&lt;/p&gt;
-
-&lt;p&gt;성능 테스트는 &lt;a href=&#34;http://www.couchbase.com&#34;&gt;Couchbase&lt;/a&gt; 직원들과 충분히(?) 진행했기에 믿고 써도 된다.&lt;/p&gt;
-</description>
+      <guid>https://intae.kim/post/10/</guid>
+      <description>RxJava를 사용하다 보면 flatMap을 무척 많이 사용하게 된다. 문제는 flatMap의 특성(merge)상 목록 순서가 꼬이는 경우가 있다. 특히 비동기 항목과 함께 사용하면 제대로 틀어진다. 이에 대한 해결책으로 concatMap을 이야기하는 경우를 보았지만 내부적으로 concat을 사용하기 때문애 동시성 처리를 했을 때에는 앞선 항목을 처리할 때 까지 기다려야 하는 문제가 있었다.
+RxJava 1.0.15 버전부터 (실험적인) concatMapEager()라는 operator를 사용할 수 있게 되었다. 이 버전이 처음 나왔을 때가 2015년 8월이므로 그 이전 RxJava에는 물론 이 기능이 없어 다른 방식으로 정렬 문제를 해결했었다.</description>
     </item>
     
     <item>
-      <title>*.github.io using hugo</title>
-      <link>https://great.github.io/post/1/</link>
+      <title>Serve *.github.io using hugo</title>
+      <link>https://intae.kim/post/1/</link>
       <pubDate>Wed, 10 Feb 2016 10:47:16 +0900</pubDate>
       
-      <guid>https://great.github.io/post/1/</guid>
-      <description>&lt;p&gt;github.io를 시작해 보려고 어떻게 하는 것인지 찾아 보니 보통 &lt;code&gt;Jekyll&lt;/code&gt;이라는 것을 가지고 만드는 것 같다.
-그런 줄만 알고 그러려니 했는데 &lt;code&gt;Jekyll&lt;/code&gt; 자체를 구동하기 위해 &lt;code&gt;ruby&lt;/code&gt;기반으로 이것저것 설치를 해야 해서 고통스럽다.
-갑자기 다른 곳에서 &lt;del&gt;과연 그럴 일이&amp;hellip;&lt;/del&gt; 뭔가 쓰고 싶거나 할 때 ruby부터 설치하고 어쩌고 해야 하는 과정이 매우 번거로워 보인다.&lt;/p&gt;
-
-&lt;p&gt;그러던 중 &lt;code&gt;go&lt;/code&gt;를 가지고 만든 &lt;a href=&#34;http://gohugo.io&#34;&gt;hugo&lt;/a&gt;라는 것을 알게 되었고 go 특성(?)상 번거로운 실행 환경 구성 문제가 없어 &lt;del&gt;날로 먹을 수 있다&lt;/del&gt; 마음에 든다.&lt;/p&gt;
-
-&lt;p&gt;대부분 환경에서 구동 가능한 hugo 바이너리를 간단히 받을 수 있으니
-&amp;ldquo;특별한 경우&amp;rdquo;에 글 하나 올리겠다고 ruby 환경 구성하고 Jekyll 설치까지 해야 하는 그런 일은 안 해도 된다.&lt;/p&gt;
-</description>
+      <guid>https://intae.kim/post/1/</guid>
+      <description>github.io를 시작해 보려고 어떻게 하는 것인지 찾아 보니 보통 Jekyll이라는 것을 가지고 만드는 것 같다. 그런 줄만 알고 그러려니 했는데 Jekyll 자체를 구동하기 위해 ruby기반으로 이것저것 설치를 해야 해서 고통스럽다. 갑자기 다른 곳에서 과연 그럴 일이&amp;hellip; 뭔가 쓰고 싶거나 할 때 ruby부터 설치하고 어쩌고 해야 하는 과정이 매우 번거로워 보인다.
+그러던 중 go를 가지고 만든 hugo를 알게 되었고 go 특성(?)상 번거로운 실행 환경 구성 문제가 없어 날로 먹을 수 있다 마음에 든다.</description>
     </item>
     
   </channel>
